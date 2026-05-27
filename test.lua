@@ -152,8 +152,14 @@ end
 -- Page switch
 ------------------------------------------------
 PageBtn.MouseButton1Click:Connect(function()
-	page = (page == 1) and 2 or 1
-	PageBtn.Text = (page == 2) and "◀ BACK" or "NEXT ▶"
+	page = page + 1
+
+if page > 3 then
+	page = 1
+end
+
+PageBtn.Text = (page == 3) and "◀ BACK" or "NEXT ▶"
+	
 	updateUI()
 end)
 
