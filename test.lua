@@ -236,45 +236,50 @@ end)
 local lastTap = 0
 local debounce = false
 
---UserInputService.TouchTap:Connect(function()
-	if not friendTouch then return end
+--[[
+    以下のフレンド申請機能は一時的に無効化しています。
+    必要になったら --[[ と --]] を削除してください。
+]]--
 
-	local now = tick()
-
-	if now - lastTap <= 0.35 then
-		if debounce then return end
-
-		local myHRP = character and character:FindFirstChild("HumanoidRootPart")
-		if not myHRP then return end
-
-		for _,target in pairs(Players:GetPlayers()) do
-			if target ~= player and target.Character then
-				local targetHRP = target.Character:FindFirstChild("HumanoidRootPart")
-
-				if targetHRP then
-					local distance = (myHRP.Position - targetHRP.Position).Magnitude
-
-					if distance <= 8 then
-						debounce = true
-						pcall(function()
-							StarterGui:SetCore("PromptSendFriendRequest", target)
-						end)
-						task.wait(3)
-						debounce = false
-						break
-					end
-				end
-			end
-		end
-	end
-
-	lastTap = now
+--[[
+UserInputService.TouchTap:Connect(function(touchPositions, gameProcessedEvent)
+    if gameProcessedEvent then return end
+    local now = tick()
+    if now - lastTap < 0.3 then
+        local player = game.Players.LocalPlayer
+        local mouse = player:GetMouse()
+        local target = mouse.Target
+        if target and target.Parent then
+            local targetPlayer = game.Players:GetPlayerFromCharacter(target.Parent)
+            if targetPlayer and targetPlayer ~= player then
+                local myHRP = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+                local targetHRP = target.Parent:FindFirstChild("HumanoidRootPart")
+                if myHRP and targetHRP then
+                    local distance = (myHRP.Position - targetHRP.Position).Magnitude
+                    if distance <= 8 then
+                        debounce = true
+                        pcall(function()
+                            game:GetService("StarterGui"):SetCore("SendNotification", {
+                                Title = "Friend",
+                                Text = "Requested"
+                            })
+                        end)
+                        task.wait(3)
+                        debounce = false
+                    end
+                end
+            end
+        end
+    end
+    lastTap = now
 end)
 
 FriendBtn.MouseButton1Click:Connect(function()
-	friendTouch = not friendTouch
-	FriendBtn.Text = friendTouch and "フレンド申請🤝 : ON" or "OFF"
+    friendTouch = not friendTouch
+    FriendBtn.Text = friendTouch and "フレンド申請：ON" or "フレンド申請：OFF"
 end)
+--]]
+
 
 ------------------------------------------------
 -- EXIT BUTTON
