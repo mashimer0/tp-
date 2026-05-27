@@ -235,10 +235,10 @@ end)
 local lastTap = 0
 local debounce = false
 
---[[
+
     以下のフレンド申請機能は一時的に無効化しています。
     必要になったら --[[ と --]] を削除してください。
-]]--
+
 
 --[[
 UserInputService.TouchTap:Connect(function(touchPositions, gameProcessedEvent)
