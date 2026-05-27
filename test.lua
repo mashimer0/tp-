@@ -241,7 +241,7 @@ local debounce = false
 
 
 
---[[
+
 UserInputService.TouchTap:Connect(function(touchPositions, gameProcessedEvent)
     if gameProcessedEvent then return end
     local now = tick()
@@ -278,7 +278,7 @@ FriendBtn.MouseButton1Click:Connect(function()
     friendTouch = not friendTouch
     FriendBtn.Text = friendTouch and "フレンド申請：ON" or "フレンド申請：OFF"
 end)
---]]
+
 
 
 ------------------------------------------------
