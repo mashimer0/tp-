@@ -140,9 +140,9 @@ local function updateUI()
 
 
 if p2 then
-    frame.Size = UDim2.new(0,220,0,170)
+    frame.Size = UDim2.new(0,220,0,150)
 else
-    frame.Size = UDim2.new(0,220,0,240)
+    frame.Size = UDim2.new(0,220,0,260)
 end
 
 WallBtn.Visible = not p2
