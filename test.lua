@@ -276,9 +276,19 @@ end)
 
 FriendBtn.MouseButton1Click:Connect(function()
     friendTouch = not friendTouch
-    FriendBtn.Text = friendTouch and "フレンド申請：ON" or "フレンド申請：OFF"
+    FriendBtn.Text = friendTouch and "フレンドON" or "フレンドOFF"
 end)
 
+
+
+FriendBtn.MouseButton1Click:Connect(function()
+    friendTouch = not friendTouch
+    FriendBtn.Text = friendTouch and "フレンドON" or "フレンドOFF"
+
+    FriendBtn.BackgroundColor3 = friendTouch
+        and Color3.fromRGB(0,170,255)
+        or Color3.fromRGB(60,60,60)
+end)
 
 
 ------------------------------------------------
