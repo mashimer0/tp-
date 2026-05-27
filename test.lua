@@ -139,18 +139,18 @@ local function updateUI()
 	PageBtn.Visible = true
 
 
-if p2 then
-    frame.Size = UDim2.new(0,220,0,150)
-else
-    frame.Size = UDim2.new(0,220,0,260)
-end
+frame.Size = page == 1
+    and UDim2.new(0,220,0,240)
+    or UDim2.new(0,220,0,170)
 
-WallBtn.Visible = not p2
+WallBtn.Visible = (page == 1)
+SaveBtn.Visible = (page == 1)
+TpBtn.Visible = (page == 1)
 
-	SaveBtn.Visible = not p2
-	TpBtn.Visible = not p2
+JumpBtn.Visible = (page == 2)
+FriendBtn.Visible = (page == 2)
 
-	JumpBtn.Visible = p2
+LeaveBtn.Visible = (page == 2)
 	FriendBtn.Visible = p2
 	LeaveBtn.Visible = p2
 end
