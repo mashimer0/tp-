@@ -139,22 +139,19 @@ local function updateUI()
 	PageBtn.Visible = true
 
 
-frame.Size = UDim2.new(0,210,0,170)
+if page == 1 then
+    frame.Size = UDim2.new(0,210,0,170)
+else
+    frame.Size = UDim2.new(0,210,0,170)
+end
 
 WallBtn.Visible = (page == 1)
 SaveBtn.Visible = (page == 1)
 TpBtn.Visible = (page == 1)
 
-JumpBtn.Visible = true
+JumpBtn.Visible = (page == 2)
 FriendBtn.Visible = (page == 2)
 LeaveBtn.Visible = (page == 2)
-frame.Size = UDim2.new(0,210,0,170)
-
-WallBtn.Visible = (page == 1)
-SaveBtn.Visible = (page == 1)
-TpBtn.Visible = (page == 1)
-
-JumpBtn.Visible = true
 FriendBtn.Visible = (page == 2)
 LeaveBtn.Visible = (page == 2)
 end
