@@ -236,7 +236,7 @@ end)
 local lastTap = 0
 local debounce = false
 
-UserInputService.TouchTap:Connect(function()
+--UserInputService.TouchTap:Connect(function()
 	if not friendTouch then return end
 
 	local now = tick()
