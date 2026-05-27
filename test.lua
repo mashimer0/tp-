@@ -139,6 +139,11 @@ local function updateUI()
 	PageBtn.Visible = true
 
 	WallBtn.Visible = not p2
+if p2 then
+    frame.Size = UDim2.new(0,220,0,170)
+else
+    frame.Size = UDim2.new(0,220,0,240)
+end
 	SaveBtn.Visible = not p2
 	TpBtn.Visible = not p2
 
