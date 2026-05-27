@@ -148,12 +148,15 @@ TpBtn.Visible = (page == 1)
 JumpBtn.Visible = true
 FriendBtn.Visible = (page == 2)
 LeaveBtn.Visible = (page == 2)
+frame.Size = UDim2.new(0,210,0,170)
+
+WallBtn.Visible = (page == 1)
+SaveBtn.Visible = (page == 1)
+TpBtn.Visible = (page == 1)
+
 JumpBtn.Visible = true
 FriendBtn.Visible = (page == 2)
 LeaveBtn.Visible = (page == 2)
-LeaveBtn.Visible = (page == 2)
-	FriendBtn.Visible = p2
-	LeaveBtn.Visible = p2
 end
 
 ------------------------------------------------
