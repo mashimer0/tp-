@@ -94,13 +94,13 @@ end
 ------------------------------------------------
 -- Buttons
 ------------------------------------------------
-local WallBtn = createButton("壁抜け : OFF",35,Color3.fromRGB(200,60,60))
-local SaveBtn = createButton("セーブ",72,Color3.fromRGB(60,120,255))
-local TpBtn = createButton("TP",109,Color3.fromRGB(170,85,255))
+local WallBtn = createButton("壁抜け : OFF",35,Color3.fromRGB(255,80,80))
+local SaveBtn = createButton("セーブ",72,Color3.fromRGB(70,120,255))
+local TpBtn = createButton("TP",109,Color3.fromRGB(170,80,255))
 
-local JumpBtn = createButton("無限ジャンプ : OFF",146,Color3.fromRGB(170,120,255))
-local FriendBtn = createButton("フレンド申請🤝",183,Color3.fromRGB(255,170,0))
-local LeaveBtn = createButton("ゲームを退出",220,Color3.fromRGB(255,80,80))
+local JumpBtn = createButton("無限ジャンプ : OFF",35,Color3.fromRGB(170,120,255))
+local FriendBtn = createButton("フレンド申請🤝",72,Color3.fromRGB(255,170,0))
+local LeaveBtn = createButton("ゲームを退出",109,Color3.fromRGB(255,80,80))
 
 JumpBtn.Visible = false
 FriendBtn.Visible = false
