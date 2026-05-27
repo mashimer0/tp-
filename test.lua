@@ -159,6 +159,7 @@ if page > 3 then
 end
 
 PageBtn.Text = (page == 3) and "◀ BACK" or "NEXT ▶"
+
 	
 	updateUI()
 end)
