@@ -112,9 +112,7 @@ LeaveBtn.Visible = false
 local PageBtn = Instance.new("TextButton")
 PageBtn.Parent = frame
 PageBtn.Size = UDim2.new(0,70,0,22)
-PageBtn.AnchorPoint = Vector2.new(1,1)
-PageBtn.Position = UDim2.new(1,-10,1,-10)
-PageBtn.Text = "NEXT ▶"
+
 PageBtn.BackgroundColor3 = Color3.fromRGB(80,80,80)
 PageBtn.TextColor3 = Color3.new(1,1,1)
 PageBtn.Font = Enum.Font.GothamBold
